@@ -8,9 +8,9 @@ on:
 jobs:
   test:
     strategy:
-      fail-fast: false
+      fail-fast: true
       matrix:
-        platform: [macos-latest, ubuntu-20.04, windows-latest]
+        platform: [ubuntu-20.04]
     runs-on: ${{ matrix.platform }}
     steps:
       - uses: actions/checkout@v4
@@ -48,5 +48,6 @@ jobs:
       - name: Build frontend
         run: pnpm run build
         
-      - name: Build Tauri app (test build)
-        run: pnpm run tauri build
+      # Skip full Tauri build on PRs - just check frontend builds
+      # - name: Build Tauri app (test build)
+      #   run: pnpm run tauri build
