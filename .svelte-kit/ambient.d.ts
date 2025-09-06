@@ -51,6 +51,7 @@ declare module '$env/static/private' {
 	export const QHOME: string;
 	export const OCAML_TOPLEVEL_PATH: string;
 	export const USER: string;
+	export const TATTOY_RUNNING: string;
 	export const HELIX_RUNTIME: string;
 	export const TAURI_ENV_TARGET_TRIPLE: string;
 	export const LS_COLORS: string;
@@ -172,6 +173,7 @@ declare module '$env/dynamic/private' {
 		QHOME: string;
 		OCAML_TOPLEVEL_PATH: string;
 		USER: string;
+		TATTOY_RUNNING: string;
 		HELIX_RUNTIME: string;
 		TAURI_ENV_TARGET_TRIPLE: string;
 		LS_COLORS: string;
